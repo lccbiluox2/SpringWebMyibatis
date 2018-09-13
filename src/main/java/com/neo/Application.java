@@ -1,5 +1,6 @@
 package com.neo;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 // 添加servlet组件扫描，使得Spring能够扫描到我们编写的servlet和filter
 @ServletComponentScan
+@MapperScan("com.neo.mapper")
 public class Application {
 
     public static void main(String[] args) {
